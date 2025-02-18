@@ -22,111 +22,6 @@
       </tags>
   </entry>
   <entry>
-    <title>1-Linux系统基本操作</title>
-    <url>/2025/02/17/Linux-driver/1-Linux%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\some\place\APlayer.min.css"><script src="http://xxx/aplayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\some\place\Meting.min.js"></script><h1 id="一-linux内核"><a href="#一-linux内核" class="headerlink" title="一.linux内核"></a>一.linux内核</h1><h2 id="1-啥是内核"><a href="#1-啥是内核" class="headerlink" title="1.啥是内核"></a>1.啥是内核</h2><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725204524887.png" alt="image-20240725204524887"></p>
-<p>内核约等于操作寄存器，但是内核不能被用户直接操作，而是要通过调用</p>
-<h2 id="2-内核下载"><a href="#2-内核下载" class="headerlink" title="2.内核下载"></a>2.内核下载</h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725204737104.png" alt="image-20240725204737104"></h2><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725205015723.png" alt="image-20240725205015723"></p>
-<p>谁都能用内核源码封装一个操作系统</p>
-<h2 id="3-远程连接"><a href="#3-远程连接" class="headerlink" title="3.远程连接"></a>3.远程连接</h2><p>finalshell -&gt;ssh -&gt;ip地址</p>
-<p>wsl</p>
-<h1 id="二-基础命令"><a href="#二-基础命令" class="headerlink" title="二.基础命令"></a>二.基础命令</h1><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725213218690.png" alt="image-20240725213218690"></p>
-<h2 id="1-基本命令"><a href="#1-基本命令" class="headerlink" title="1.基本命令"></a>1.基本命令</h2><h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>默认打开home</p>
-<p>ls -ahl &#x2F;</p>
-<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p>默认进去home目录</p>
-<p>注意相对绝对路径</p>
-<p>可以使用特殊路径符</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725214818087.png" alt="image-20240725214818087"></p>
-<h3 id="pwd（print-work-directory）"><a href="#pwd（print-work-directory）" class="headerlink" title="pwd（print work directory）"></a>pwd（print work directory）</h3><p>查看当前目录</p>
-<h3 id="mkdir（make-directory）"><a href="#mkdir（make-directory）" class="headerlink" title="mkdir（make directory）"></a>mkdir（make directory）</h3><p>新建目录</p>
-<p>mkdir -p 路径 	一次性创建多层目录</p>
-<p>注：在home下做命令是可以不考虑权限</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725215154797.png" alt="image-20240725215154797"></p>
-<h2 id="2-文件操作命令"><a href="#2-文件操作命令" class="headerlink" title="2.文件操作命令"></a>2.文件操作命令</h2><h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>创建文件</p>
-<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p>查看文件内容</p>
-<h3 id="more"><a href="#more" class="headerlink" title="more"></a>more</h3><p>查看文件内容，支持翻页比cat更牛逼，可查看内容多的文档</p>
-<p>空格翻页</p>
-<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><p>复制文件</p>
-<p>cp -r 路径		复制文件夹</p>
-<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p>移动文件</p>
-<p>文件改名</p>
-<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p>删除</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725221708073.png" alt="image-20240725221708073"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725222233801.png" alt="image-20240725222233801"></p>
-<p>强制删除需要更高的权限，root用户下删除文件会提示询问是否删除，加上-f后直接不弹出</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725222344378.png" alt="image-20240725222344378"></p>
-<h2 id="3-查找命令"><a href="#3-查找命令" class="headerlink" title="3.查找命令"></a>3.查找命令</h2><h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><p>查找命令存放的地方</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725222939991.png" alt="image-20240725222939991"></p>
-<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p>两种搜索方式，同时可以使用通配符</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725224045327.png" alt="image-20240725224045327"></p>
-<p>查找文件<img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725224026231.png" alt="image-20240725224026231"></p>
-<h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><h3 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h3><p>在命令行输出指定内容</p>
-<p>可以用双引号“”包围，如果内容比较复杂，有空格或特殊符号的时候</p>
-<p>可以用反引号&#96;&#96;包围，被包围的内容会被作为命令执行</p>
-<p>任何可以产生结果的东西可以通过重定向符写入到文件中，这里由于echo可以直接将文字打印出来方便理解放在这里</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725225713313.png" alt="image-20240725225713313"></p>
-<h3 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h3><p>从后往前看文件的东西</p>
-<p>当持续追踪后，可以再开一个命令窗，对文件进行修改，在追踪中的窗口中会一直执行追踪，可以看到现象，ctrl+c结束</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725225924816.png" alt="image-20240725225924816"></p>
-<h2 id="5"><a href="#5" class="headerlink" title="5."></a>5.</h2><h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><p>在文件把想要找到的字输出出来</p>
-<p>标红的意思是不填内容，搭配管道符使用</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725230531665.png" alt="image-20240725230531665"></p>
-<h2 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h2><p>文件内容的统计</p>
-<p>默认输出 行数 单词数 字节数</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725230910766.png" alt="image-20240725230910766"></p>
-<p>管道符 |	</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725231123443.png" alt="image-20240725231123443"></p>
-<h1 id="三-vi-vim文本编辑器"><a href="#三-vi-vim文本编辑器" class="headerlink" title="三.vi\vim文本编辑器"></a>三.vi\vim文本编辑器</h1><p>直接打开是命令模式，并以其作为中转</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725231731343.png" alt="image-20240725231731343"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725232925022.png" alt="image-20240725232925022"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725233106406.png" alt="image-20240725233106406"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725233213522.png" alt="image-20240725233213522"></p>
-<h1 id="三-用户权限"><a href="#三-用户权限" class="headerlink" title="三.用户权限"></a>三.用户权限</h1><h2 id="1-root用户（超级管理员）"><a href="#1-root用户（超级管理员）" class="headerlink" title="1.root用户（超级管理员）"></a>1.root用户（超级管理员）</h2><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731110720419.png" alt="image-20240731110720419"></p>
-<p>普通用户只在自己的home是是有权限，例如在根目录下无法创建文件夹</p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731111020482.png" alt="image-20240731111020482"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731113525280.png" alt="image-20240731113525280"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731113911326.png" alt="image-20240731113911326"></p>
-<h2 id="2-用户、用户组"><a href="#2-用户、用户组" class="headerlink" title="2.用户、用户组"></a>2.用户、用户组</h2><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731114614723.png" alt="image-20240731114614723"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731114715542.png" alt="image-20240731114715542"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731115012411.png" alt="image-20240731115012411"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121213497.png" alt="image-20240731121213497"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121258867.png" alt="image-20240731121258867"></p>
-<h2 id="3-权限信息"><a href="#3-权限信息" class="headerlink" title="3.权限信息"></a>3.权限信息</h2><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121409372.png" alt="image-20240731121409372"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121445715.png" alt="image-20240731121445715"></p>
-<h2 id="4-修改权限控制"><a href="#4-修改权限控制" class="headerlink" title="4.修改权限控制"></a>4.修改权限控制</h2><h3 id="修改权限信息"><a href="#修改权限信息" class="headerlink" title="修改权限信息"></a>修改权限信息</h3><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121633486.png" alt="image-20240731121633486"></p>
-<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121830853.png" alt="image-20240731121830853"></p>
-<h3 id="修改所属的用户、用户组"><a href="#修改所属的用户、用户组" class="headerlink" title="修改所属的用户、用户组"></a>修改所属的用户、用户组</h3><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731122028921.png" alt="image-20240731122028921"></p>
-<h1 id="四-快捷键"><a href="#四-快捷键" class="headerlink" title="四.快捷键"></a>四.快捷键</h1><h1 id="五-linux文件管理"><a href="#五-linux文件管理" class="headerlink" title="五.linux文件管理"></a>五.linux文件管理</h1><p>Linux 系统中的 7 种文件类型，包括：普通文件、目录、字符设备文件、块设备文件、符号链接文件、管道文件以及套接字文件。</p>
-<h2 id="5-1静态文件与inode"><a href="#5-1静态文件与inode" class="headerlink" title="5.1静态文件与inode"></a>5.1静态文件与inode</h2><p>文件没打开前儿是存放在磁盘里如u盘，他以一种固定的形式进行存放，我们叫他静态文件。</p>
-<p>硬盘的最小储存单位是扇区（512字节，0.5kb）。</p>
-<p>多个扇区组成块，他是文件存取的最小单位，通常是4kb八个扇区。</p>
-<p>由于一个个读取扇区效率太低，而是一次读取一个块</p>
-<p>硬盘在分区或格式化是会有俩区域，数据区和inode区</p>
-<p>后者存放 inode table （inode表），他存放一个个inode节点，每个文件对应一个inode，相当于一个结构体，记录文件不同信息</p>
-<p>在windows下快速格式化是只清理inode区</p>
-<p><strong>打开一个文件，系统内部会将这个过程分为三步：</strong></p>
-<ol>
-<li><p>系统找到这个文件名所对应的 inode 编号；</p>
-</li>
-<li><p>通过 inode 编号从 inode table 中找到对应的 inode 结构体；</p>
-</li>
-<li><p>根据 inode 结构体中记录的信息，确定文件数据所在的 block，并读出数据。</p>
-</li>
-</ol>
-<p>文件被打开后，内核会申请一段内存（缓存区），他从静态文件变成了动态文件，我们在对其进行操作是对动态文件操作，在结束操作时内核会自动同步到磁盘中。</p>
-<h2 id="5-2空洞文件"><a href="#5-2空洞文件" class="headerlink" title="5.2空洞文件"></a>5.2空洞文件</h2><p>使用lseek（）可以修改文件读写位置的偏移量，当偏移字节大于文件字节，会形成空洞文件。</p>
-<p>这样做是有好处的，比如在下载文件时，还没下完就已经有内存占用，我们可以开启多个线程从不同位置写入，这样可以提高下载速度。</p>
-<h2 id="5-3"><a href="#5-3" class="headerlink" title="5.3"></a>5.3</h2><h2 id="5-5"><a href="#5-5" class="headerlink" title="5.5"></a>5.5</h2>]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>驱动开发</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>驱动开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2-驱动开发知识构建</title>
     <url>/2025/02/15/Linux-driver/2-%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E6%9E%84%E5%BB%BA/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\some\place\APlayer.min.css"><script src="http://xxx/aplayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\some\place\Meting.min.js"></script><h2 id="为什么要linux驱动"><a href="#为什么要linux驱动" class="headerlink" title="为什么要linux驱动"></a>为什么要linux驱动</h2><p>首先我们需要明白一点，驱动和开发的关系可以理解为是先有鸡还是再先有蛋，驱动是更底层的是会涉及到内核的，而应用是无法直接操控内核，我们在开发过程中先做一个驱动，驱动提供一个接口可以被应用调用。</p>
@@ -474,6 +369,111 @@
 <p>从此以后 ARM社区就引入了 PowerPC等架构已经采用的设备树 (Flattened Device Tree)，将这些描述板级硬件信息的内容都从 Linux内中分离开来，用一个专属的文件格式来描<br>述，这个专属的文件就叫做设备树，文件扩展名为 .dts。一个 SOC可以作出很多不同的板子，<br>这些不同的板子肯定是有共同的信息，将这些共同的信息提取出来作为一个通用的文件，其他<br>的 .dts文件直接引用这个通用文件即可，这个通用文件就是 .dtsi文件，类似于 C语言中的头文<br>件。一般 .dts描述板级信息 (也就是开发板上有哪些 IIC设备、 SPI设备等 )，，.dtsi描述 SOC级信<br>息 (也就是 SOC有几个 CPU、主频是多少、各个外设控制器信息等 )。<br>这个就是设备树的由来，简而言之就是， Linux内核中 ARM架构下有太多的冗余的垃圾<br>板级信息文件，导致 linus震怒，然后 ARM社区引入了设备树。</p>
 <p>因此在 .dts设<br>备树文件中，可以通过“ “#include”来引用 .h、 .dtsi和 .dts文件。只是，我们在编写设备树头文<br>件的时候最好选择 .dtsi后缀。<br>一般 .dtsi文件用于描述 SOC的内部外设信息，比如 CPU架构、主频、外设寄存器地址范<br>围，比如 UART、 IIC等等。 比如 rk3568.dtsi就是描述 RK3568芯片本身的外设信息， 内容如<br>下：</p>
 ]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>驱动开发</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>驱动开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1-Linux系统基本操作</title>
+    <url>/2025/02/17/Linux-driver/1-Linux%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\some\place\APlayer.min.css"><script src="http://xxx/aplayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\some\place\Meting.min.js"></script><h1 id="一-linux内核"><a href="#一-linux内核" class="headerlink" title="一.linux内核"></a>一.linux内核</h1><h2 id="1-啥是内核"><a href="#1-啥是内核" class="headerlink" title="1.啥是内核"></a>1.啥是内核</h2><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725204524887.png" alt="image-20240725204524887"></p>
+<p>内核约等于操作寄存器，但是内核不能被用户直接操作，而是要通过调用</p>
+<h2 id="2-内核下载"><a href="#2-内核下载" class="headerlink" title="2.内核下载"></a>2.内核下载</h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725204737104.png" alt="image-20240725204737104"></h2><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725205015723.png" alt="image-20240725205015723"></p>
+<p>谁都能用内核源码封装一个操作系统</p>
+<h2 id="3-远程连接"><a href="#3-远程连接" class="headerlink" title="3.远程连接"></a>3.远程连接</h2><p>finalshell -&gt;ssh -&gt;ip地址</p>
+<p>wsl</p>
+<h1 id="二-基础命令"><a href="#二-基础命令" class="headerlink" title="二.基础命令"></a>二.基础命令</h1><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725213218690.png" alt="image-20240725213218690"></p>
+<h2 id="1-基本命令"><a href="#1-基本命令" class="headerlink" title="1.基本命令"></a>1.基本命令</h2><h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>默认打开home</p>
+<p>ls -ahl &#x2F;</p>
+<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p>默认进去home目录</p>
+<p>注意相对绝对路径</p>
+<p>可以使用特殊路径符</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725214818087.png" alt="image-20240725214818087"></p>
+<h3 id="pwd（print-work-directory）"><a href="#pwd（print-work-directory）" class="headerlink" title="pwd（print work directory）"></a>pwd（print work directory）</h3><p>查看当前目录</p>
+<h3 id="mkdir（make-directory）"><a href="#mkdir（make-directory）" class="headerlink" title="mkdir（make directory）"></a>mkdir（make directory）</h3><p>新建目录</p>
+<p>mkdir -p 路径 	一次性创建多层目录</p>
+<p>注：在home下做命令是可以不考虑权限</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725215154797.png" alt="image-20240725215154797"></p>
+<h2 id="2-文件操作命令"><a href="#2-文件操作命令" class="headerlink" title="2.文件操作命令"></a>2.文件操作命令</h2><h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>创建文件</p>
+<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p>查看文件内容</p>
+<h3 id="more"><a href="#more" class="headerlink" title="more"></a>more</h3><p>查看文件内容，支持翻页比cat更牛逼，可查看内容多的文档</p>
+<p>空格翻页</p>
+<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><p>复制文件</p>
+<p>cp -r 路径		复制文件夹</p>
+<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p>移动文件</p>
+<p>文件改名</p>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p>删除</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725221708073.png" alt="image-20240725221708073"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725222233801.png" alt="image-20240725222233801"></p>
+<p>强制删除需要更高的权限，root用户下删除文件会提示询问是否删除，加上-f后直接不弹出</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725222344378.png" alt="image-20240725222344378"></p>
+<h2 id="3-查找命令"><a href="#3-查找命令" class="headerlink" title="3.查找命令"></a>3.查找命令</h2><h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><p>查找命令存放的地方</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725222939991.png" alt="image-20240725222939991"></p>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p>两种搜索方式，同时可以使用通配符</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725224045327.png" alt="image-20240725224045327"></p>
+<p>查找文件<img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725224026231.png" alt="image-20240725224026231"></p>
+<h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><h3 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h3><p>在命令行输出指定内容</p>
+<p>可以用双引号“”包围，如果内容比较复杂，有空格或特殊符号的时候</p>
+<p>可以用反引号&#96;&#96;包围，被包围的内容会被作为命令执行</p>
+<p>任何可以产生结果的东西可以通过重定向符写入到文件中，这里由于echo可以直接将文字打印出来方便理解放在这里</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725225713313.png" alt="image-20240725225713313"></p>
+<h3 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h3><p>从后往前看文件的东西</p>
+<p>当持续追踪后，可以再开一个命令窗，对文件进行修改，在追踪中的窗口中会一直执行追踪，可以看到现象，ctrl+c结束</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725225924816.png" alt="image-20240725225924816"></p>
+<h2 id="5"><a href="#5" class="headerlink" title="5."></a>5.</h2><h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><p>在文件把想要找到的字输出出来</p>
+<p>标红的意思是不填内容，搭配管道符使用</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725230531665.png" alt="image-20240725230531665"></p>
+<h2 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h2><p>文件内容的统计</p>
+<p>默认输出 行数 单词数 字节数</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725230910766.png" alt="image-20240725230910766"></p>
+<p>管道符 |	</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725231123443.png" alt="image-20240725231123443"></p>
+<h1 id="三-vi-vim文本编辑器"><a href="#三-vi-vim文本编辑器" class="headerlink" title="三.vi\vim文本编辑器"></a>三.vi\vim文本编辑器</h1><p>直接打开是命令模式，并以其作为中转</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725231731343.png" alt="image-20240725231731343"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725232925022.png" alt="image-20240725232925022"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725233106406.png" alt="image-20240725233106406"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240725233213522.png" alt="image-20240725233213522"></p>
+<h1 id="三-用户权限"><a href="#三-用户权限" class="headerlink" title="三.用户权限"></a>三.用户权限</h1><h2 id="1-root用户（超级管理员）"><a href="#1-root用户（超级管理员）" class="headerlink" title="1.root用户（超级管理员）"></a>1.root用户（超级管理员）</h2><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731110720419.png" alt="image-20240731110720419"></p>
+<p>普通用户只在自己的home是是有权限，例如在根目录下无法创建文件夹</p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731111020482.png" alt="image-20240731111020482"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731113525280.png" alt="image-20240731113525280"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731113911326.png" alt="image-20240731113911326"></p>
+<h2 id="2-用户、用户组"><a href="#2-用户、用户组" class="headerlink" title="2.用户、用户组"></a>2.用户、用户组</h2><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731114614723.png" alt="image-20240731114614723"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731114715542.png" alt="image-20240731114715542"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731115012411.png" alt="image-20240731115012411"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121213497.png" alt="image-20240731121213497"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121258867.png" alt="image-20240731121258867"></p>
+<h2 id="3-权限信息"><a href="#3-权限信息" class="headerlink" title="3.权限信息"></a>3.权限信息</h2><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121409372.png" alt="image-20240731121409372"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121445715.png" alt="image-20240731121445715"></p>
+<h2 id="4-修改权限控制"><a href="#4-修改权限控制" class="headerlink" title="4.修改权限控制"></a>4.修改权限控制</h2><h3 id="修改权限信息"><a href="#修改权限信息" class="headerlink" title="修改权限信息"></a>修改权限信息</h3><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121633486.png" alt="image-20240731121633486"></p>
+<p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731121830853.png" alt="image-20240731121830853"></p>
+<h3 id="修改所属的用户、用户组"><a href="#修改所属的用户、用户组" class="headerlink" title="修改所属的用户、用户组"></a>修改所属的用户、用户组</h3><p><img src="C:\Users\23092\AppData\Roaming\Typora\typora-user-images\image-20240731122028921.png" alt="image-20240731122028921"></p>
+<h1 id="四-快捷键"><a href="#四-快捷键" class="headerlink" title="四.快捷键"></a>四.快捷键</h1><h1 id="五-linux文件管理"><a href="#五-linux文件管理" class="headerlink" title="五.linux文件管理"></a>五.linux文件管理</h1><p>Linux 系统中的 7 种文件类型，包括：普通文件、目录、字符设备文件、块设备文件、符号链接文件、管道文件以及套接字文件。</p>
+<h2 id="5-1静态文件与inode"><a href="#5-1静态文件与inode" class="headerlink" title="5.1静态文件与inode"></a>5.1静态文件与inode</h2><p>文件没打开前儿是存放在磁盘里如u盘，他以一种固定的形式进行存放，我们叫他静态文件。</p>
+<p>硬盘的最小储存单位是扇区（512字节，0.5kb）。</p>
+<p>多个扇区组成块，他是文件存取的最小单位，通常是4kb八个扇区。</p>
+<p>由于一个个读取扇区效率太低，而是一次读取一个块</p>
+<p>硬盘在分区或格式化是会有俩区域，数据区和inode区</p>
+<p>后者存放 inode table （inode表），他存放一个个inode节点，每个文件对应一个inode，相当于一个结构体，记录文件不同信息</p>
+<p>在windows下快速格式化是只清理inode区</p>
+<p><strong>打开一个文件，系统内部会将这个过程分为三步：</strong></p>
+<ol>
+<li><p>系统找到这个文件名所对应的 inode 编号；</p>
+</li>
+<li><p>通过 inode 编号从 inode table 中找到对应的 inode 结构体；</p>
+</li>
+<li><p>根据 inode 结构体中记录的信息，确定文件数据所在的 block，并读出数据。</p>
+</li>
+</ol>
+<p>文件被打开后，内核会申请一段内存（缓存区），他从静态文件变成了动态文件，我们在对其进行操作是对动态文件操作，在结束操作时内核会自动同步到磁盘中。</p>
+<h2 id="5-2空洞文件"><a href="#5-2空洞文件" class="headerlink" title="5.2空洞文件"></a>5.2空洞文件</h2><p>使用lseek（）可以修改文件读写位置的偏移量，当偏移字节大于文件字节，会形成空洞文件。</p>
+<p>这样做是有好处的，比如在下载文件时，还没下完就已经有内存占用，我们可以开启多个线程从不同位置写入，这样可以提高下载速度。</p>
+<h2 id="5-3"><a href="#5-3" class="headerlink" title="5.3"></a>5.3</h2><h2 id="5-5"><a href="#5-5" class="headerlink" title="5.5"></a>5.5</h2>]]></content>
       <categories>
         <category>Linux</category>
         <category>驱动开发</category>
